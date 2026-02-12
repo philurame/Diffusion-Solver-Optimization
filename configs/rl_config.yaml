@@ -1,0 +1,27 @@
+name: GRAD-SCALAR-b1-soft
+nfe: 10
+epochs: 10
+
+loss: 
+  name: HPS-LPIPS
+  hps_coef: 3
+
+solver:
+  theor_solver: DDIM
+  train_solver: SCALAR
+  lr: 0.0001
+
+timesteps:
+  train_solver_timesteps: true
+  train_diffusion_timesteps: true
+  param_method: softplus # cumprod softplus
+  lr: 0.0001
+
+
+dataset:
+  name: DDIM_100
+  train_size: 8000
+  train_batch_size: 1
+  train_mini_batch_size: 1
+  val_size: 1000
+  val_batch_size: 16

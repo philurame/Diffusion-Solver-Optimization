@@ -1,0 +1,12 @@
+# Recursuve ignorance
+__pycache__/
+env/
+data/
+logs/
+
+# Other
+.DS_store
+
+*.pt
+*.pkl
+# *.ipynb
